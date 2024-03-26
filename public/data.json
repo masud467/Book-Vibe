@@ -8,7 +8,7 @@
       "totalPages": 180,
       "rating": 4.5,
       "category": "Fiction",
-      "tags": ["Classic", "Romance", "Tragedy"],
+      "tags": ["Classic", "Romance"],
       "publisher": "Scribner",
       "yearOfPublishing": 1925
     },
@@ -21,7 +21,7 @@
       "totalPages": 281,
       "rating": 4.8,
       "category": "Fiction",
-      "tags": ["Social Justice", "Coming-of-Age", "Legal Drama"],
+      "tags": ["Social Justice", "Coming-of-Age"],
       "publisher": "J.B. Lippincott & Co.",
       "yearOfPublishing": 1960
     },
@@ -34,7 +34,7 @@
       "totalPages": 328,
       "rating": 4.7,
       "category": "Fiction",
-      "tags": ["Dystopian", "Political Allegory", "Surveillance"],
+      "tags": ["Dystopian", "Political Allegory"],
       "publisher": "Secker & Warburg",
       "yearOfPublishing": 1949
     },
@@ -47,7 +47,7 @@
       "totalPages": 224,
       "rating": 4.4,
       "category": "Science Fiction",
-      "tags": ["Satire", "Adventure", "Absurdism"],
+      "tags": ["Satire", "Adventure"],
       "publisher": "Pan Books",
       "yearOfPublishing": 1979
     },
@@ -60,7 +60,7 @@
       "totalPages": 432,
       "rating": 4.6,
       "category": "Fiction",
-      "tags": ["Romance", "Satire", "Social Commentary"],
+      "tags": ["Romance", "Satire"],
       "publisher": "T. Egerton, Whitehall",
       "yearOfPublishing": 1813
     },
@@ -73,7 +73,7 @@
       "totalPages": 277,
       "rating": 4.3,
       "category": "Fiction",
-      "tags": ["Coming-of-Age", "Alienation", "American Literature"],
+      "tags": ["Coming-of-Age", "Alienation"],
       "publisher": "Little, Brown and Company",
       "yearOfPublishing": 1951
     }
