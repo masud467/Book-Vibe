@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -50,7 +50,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex gap-5">
           <a className="btn">Sign In</a>
           <a className="btn">Sign Up</a>
         </div>
