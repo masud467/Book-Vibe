@@ -1,5 +1,6 @@
-import { Outlet } from "react-router-dom";
-import Header from "../../Shared/Header/Header";
+import Banner from "../../Components/Banner/Banner";
+import BookList from "../../Components/BookList/BookList";
+
 
 
 
@@ -7,8 +8,8 @@ import Header from "../../Shared/Header/Header";
 const Home = () => {
     return (
         <div>
-            <Header></Header>
-            <Outlet></Outlet>
+           <Banner></Banner>
+           <BookList></BookList>
         </div>
     );
 };
