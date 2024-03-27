@@ -45,6 +45,7 @@ const Header = () => {
             <NavLink to='/listed-books' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Listed Books</NavLink>
             <NavLink to='/pages-to-read' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Pages to Read</NavLink>
             <NavLink to='/most-readed-books' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Most Readed Books</NavLink>
+            <NavLink to='/price-plan' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Pricing</NavLink>
             {/* <li>
               <a>Home</a>
             </li>

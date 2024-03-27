@@ -7,6 +7,7 @@ import ListedBook from "../Pages/ListedBook/ListedBook";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import PagesToRead from "../Pages/PagesToRead/PagesToRead";
 import MostReadedBooks from "../Pages/MostReadedBooks/MostReadedBooks";
+import Pricing from "../Pages/Pricing/Pricing";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         {
           path:'/pages-to-read',
           element:<PagesToRead></PagesToRead>
+        },
+        {
+          path:'/price-plan',
+          element:<Pricing></Pricing>
         },
         {
           path:'/most-readed-books',
