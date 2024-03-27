@@ -1,7 +1,7 @@
 // import useLocalStorage from "../../Hooks/useLocalStorage";
 
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getStoredBook } from "../../Utility/LocalStorage";
 import ListedBookCard from "../../Components/ListedBookCard/ListedBookCard";
 import { Button } from "@material-tailwind/react";
@@ -11,22 +11,23 @@ const ListedBook = () => {
   //   console.log(localData);
 
   const books = useLoaderData();
+  const [tabIndex,setTabIndex] = useState(0)
 
   const [listedBook, setListedBook] = useState([]);
-  const [displayBook,setDisplayBook] = useState([])
+  const [displayBook, setDisplayBook] = useState([]);
 
-  const handleBookFilter=(filter) =>{
-    if(filter==='Rating'){
-        setDisplayBook(listedBook)
+  const handleBookFilter = (filter) => {
+    if (filter === "Rating") {
+      setDisplayBook(listedBook);
     }
-  }
+  };
 
   useEffect(() => {
     const storedBookIds = getStoredBook();
     if (books.length > 0) {
       const bookListed = books.filter((job) => storedBookIds.includes(job.id));
       setListedBook(bookListed);
-      setDisplayBook(bookListed)
+      setDisplayBook(bookListed);
     }
   }, [books]);
   return (
@@ -36,9 +37,14 @@ const ListedBook = () => {
       </h1>
       <div className="text-center mt-10">
         <details className="dropdown">
-          <summary className="m-1 btn bg-[#23BE0A] text-white">Sort by <span><img src="/images/sort.png" alt="" /></span></summary>
+          <summary className="m-1 btn bg-[#23BE0A] text-white">
+            Sort by{" "}
+            <span>
+              <img src="/images/sort.png" alt="" />
+            </span>
+          </summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li onClick={()=>handleBookFilter('Rating')}>
+            <li onClick={() => handleBookFilter("Rating")}>
               <a>Rating</a>
             </li>
             <li>
@@ -51,10 +57,15 @@ const ListedBook = () => {
         </details>
       </div>
       <div className="mt-20 max-w-7xl mx-auto border-b-2 ">
-        <Button variant="outlined" className="mr-4">
-          Read Books{" "}
-        </Button>
-        <Button variant="outlined">Wishlist Books </Button>
+        <div role="tablist" className=" tabs-lifted">
+          <Link onClick={()=>setTabIndex(0)} role="tab" className={`tab ${tabIndex===0?'tab-active font-bold':'tab'} `}>
+            Read Books
+          </Link>
+
+          <Link onClick={()=>setTabIndex(1)} role="tab" className={`tab ${tabIndex===1?'tab-active font-bold':'tab'} `}>
+            wishlist Books
+          </Link>
+        </div>
       </div>
 
       <div className="flex flex-col gap-10 mb-12 mt-5 max-w-7xl mx-auto">

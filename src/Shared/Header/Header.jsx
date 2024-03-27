@@ -41,9 +41,9 @@ const Header = () => {
         </div>
         <div className="navbar-center hidden lg:flex gap-5">
          
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/listed-books'>Listed Books</NavLink>
-            <NavLink to='/read-books'>Pages to Read</NavLink>
+            <NavLink to='/' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Home</NavLink>
+            <NavLink to='/listed-books' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Listed Books</NavLink>
+            <NavLink to='/read-books' className={({isActive}) =>isActive?"border border-[#23BE0A] text-[#23BE0A] font-semibold  rounded-lg ":"font-semibold"}>Pages to Read</NavLink>
             {/* <li>
               <a>Home</a>
             </li>

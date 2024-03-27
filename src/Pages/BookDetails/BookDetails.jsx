@@ -106,7 +106,7 @@ const BookDetails = () => {
               Read
               
             </Button>
-            <Button size="lg" variant="text" className="flex items-center gap-2 border-2 bg-blue-400 text-white text-xl font-semibold">
+            <Button onClick={handleListedReadBook} size="lg" variant="text" className="flex items-center gap-2 border-2 bg-blue-400 text-white text-xl font-semibold">
             Wishlist
               
             </Button>
