@@ -6,23 +6,24 @@ import {
     Typography,
     Button,
   } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const ListedBookCard = ({book}) => {
     const {
+        id,
         bookName,
         author,
         image,
         rating,
         category,
         tags,
-        review,
         totalPages,
         publisher,
         yearOfPublishing,
       } = book|| {};
     return (
         <div>
-            <Card className="w-full max-w-[48rem] flex-row">
+            <Card className="w-full  flex-row ">
       <CardHeader
         shadow={false}
         floated={false}
@@ -31,7 +32,7 @@ const ListedBookCard = ({book}) => {
         <img
           src={image}
           alt="card-image"
-          className="h-full w-full object-cover"
+          className="h-56 w-56  object-cover rounded-lg"
         />
       </CardHeader>
       <CardBody>
@@ -40,30 +41,27 @@ const ListedBookCard = ({book}) => {
           {bookName}
         </Typography>
         <Typography color="gray" className="mb-8 font-normal">
-          Like so many organizations these days, Autodesk is a company in
-          transition. It was until recently a traditional boxed software company
-          selling licenses. Yet its own business model disruption is only part
-          of the story
+          By : {author}
         </Typography>
-        <a href="#" className="inline-block">
-          <Button variant="text" className="flex items-center gap-2">
-            Learn More
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-              className="h-4 w-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-              />
-            </svg>
-          </Button>
-        </a>
+        <Typography className="flex gap-7" >
+           <div className="flex gap-7">
+           Tag: {tags.map(tag=><p key={tag.id}>#{tag}</p>)}
+           </div>
+           <div>
+            <img src="/images/publish.png" alt="" />
+            <p>Year of Publishing: {yearOfPublishing}</p>
+           </div>
+        </Typography>
+        <Typography className="flex gap-7">
+            <p>Publisher: {publisher}</p>
+            <p>Pages {totalPages}</p>
+        </Typography>
+        <Typography className="flex gap-8">
+            <p>Category:{category}</p>
+            <p>Rating: {rating}</p>
+            <Link to={`/book-details/${id}`}><Button className="bg-green-500 rounded-full">View Details</Button></Link>
+        </Typography>
+        
       </CardBody>
     </Card>
         </div>
