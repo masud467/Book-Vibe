@@ -3,7 +3,7 @@ import BookCard from "../BookCard/BookCard";
 
 
 const BookList = () => {
-    const {bookData} =useBookData()
+    const {bookData,loading} =useBookData()
     return (
         <div>
             <h1 className="text-2xl font-bold text-center my-10">Books</h1>
