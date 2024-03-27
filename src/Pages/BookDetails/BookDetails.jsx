@@ -11,6 +11,8 @@ import useBookData from "../../Hooks/useBookData";
 import {  saveBook} from "../../Utility/LocalStorage";
 
 const BookDetails = () => {
+  const [read,setRead] = useState(false);
+  const [wishList,setWishList] = useState(false);
   const [singleData, setSingleData] = useState({});
   const { id } = useParams();
   const idInt = parseInt(id);
@@ -19,8 +21,14 @@ const BookDetails = () => {
 
   const handleListedReadBook = () => {
     saveBook(idInt)
+    
     // saveToLocalStorage(singleData)
     // console.log('clicked.......')
+  }
+
+  const handleListedWishList = () => {
+   
+    saveBook(idInt)
   }
 
   useEffect(() => {
@@ -102,11 +110,11 @@ const BookDetails = () => {
           </div>
           
             <div className="flex gap-8 mt-5">
-            <Button onClick={handleListedReadBook} variant="text" className="flex items-center gap-2 border-2 text-xl font-semibold  ">
+            <Button onClick={handleListedReadBook}  variant="text" className="flex items-center gap-2 border-2 text-xl font-semibold  ">
               Read
               
             </Button>
-            <Button onClick={handleListedReadBook} size="lg" variant="text" className="flex items-center gap-2 border-2 bg-blue-400 text-white text-xl font-semibold">
+            <Button onClick={handleListedWishList}  size="lg" variant="text" className="flex items-center gap-2 border-2 bg-blue-400 text-white text-xl font-semibold">
             Wishlist
               
             </Button>
