@@ -1,16 +1,16 @@
-// import { useEffect, useState } from "react";
-// import { getStoredBook } from "../Utility/LocalStorage";
+import { useEffect, useState } from "react";
+import { getStoredBook } from "../Utility/LocalStorage";
 
 
-// const useLocalStorage = () => {
+const useLocalStorage = () => {
 
-//     const [localData,setLocalData] = useState([])
+    const [localData,setLocalData] = useState([])
 
-//     useEffect(()=>{
-//         setLocalData(getStoredBook)
-//     },[])
+    useEffect(()=>{
+        setLocalData(getStoredBook)
+    },[])
     
-//     return ( localData)
+    return ( localData)
        
-// }
-// export default useLocalStorage;
+}
+export default useLocalStorage;
