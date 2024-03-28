@@ -8,7 +8,7 @@ const BookList = () => {
         <div>
             <h1 className="text-2xl font-bold text-center my-10">Books</h1>
 
-             <div className="grid grid-cols-3 gap-5 max-w-7xl mx-auto">
+             <div className="grid lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
                 {
                     bookData.map(item=> <BookCard key={item.id} item={item}></BookCard>)
                 }

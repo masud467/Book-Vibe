@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 const MostReadedBooks = () => {
   return (
-    <div className="mt-10 max-w-7xl mx-auto">
+    <div className="mt-10 max-w-7xl mx-auto px-2">
       <h1 className="text-center text-xl font-bold mb-5">Most Readed Books List:</h1>
       <p className="font-semibold">
         The most read book among the provided list is<span className="text-xl font-bold text-primary">"To Kill a Mockingbird"</span> <span className="text-xl font-semibold text-secondary">by

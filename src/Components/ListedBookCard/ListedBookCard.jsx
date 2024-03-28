@@ -43,8 +43,8 @@ const ListedBookCard = ({book}) => {
         <Typography color="gray" className="mb-8 font-normal">
           By : {author}
         </Typography>
-        <Typography className="flex gap-7" >
-           <div className="flex gap-7">
+        <Typography className="lg:flex lg:gap-7 " >
+           <div className="flex lg:gap-7 gap-4">
            Tag: {tags.map(tag=><p key={tag.id}>#{tag}</p>)}
            </div>
            <div>
@@ -52,12 +52,12 @@ const ListedBookCard = ({book}) => {
             <p>Year of Publishing: {yearOfPublishing}</p>
            </div>
         </Typography>
-        <Typography className="flex gap-7">
+        <Typography className="lg:flex gap-7">
             <p>Publisher: {publisher}</p>
-            <p>Pages {totalPages}</p>
+            <p>Pages: {totalPages}</p>
         </Typography>
-        <Typography className="flex gap-8">
-            <p>Category:{category}</p>
+        <Typography className="lg:flex gap-8">
+            <p>Category: {category}</p>
             <p>Rating: {rating}</p>
             <Link to={`/book-details/${id}`}><Button className="bg-green-500 rounded-full">View Details</Button></Link>
         </Typography>

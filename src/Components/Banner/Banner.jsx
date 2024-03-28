@@ -7,12 +7,12 @@ const Banner = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src="../images/banner.png" />
           <div>
-            <h1 className="text-5xl font-bold ">
+            <h1 className="lg:text-5xl font-bold ">
               Books to freshen <br /> up your bookshelf
             </h1>
 
             <Link to='/listed-books'>
-              <button className="btn bg-green-500 mt-10">View The List</button>
+              <button className="btn bg-green-500 lg:mt-10">View The List</button>
             </Link>
           </div>
         </div>
